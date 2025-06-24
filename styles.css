@@ -238,18 +238,21 @@ h3 {
   display: flex;
   gap: 16px;
   padding: 16px var(--edge-gap);
+  padding-left: 220px;
+  padding-right: 95px;
 }
 
 /* Birthdays sidebar */
 .birthdays-widget {
   flex: 1;
-  max-width: 250px;
+  max-width: 280px;
   background: #fff;
   padding: 12px;
   border: 2px solid var(--primary-color);
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-inline-end: var(--edge-gap);
+  margin-left: 10px;
   position: relative;
   overflow: hidden;
   height: fit-content;
