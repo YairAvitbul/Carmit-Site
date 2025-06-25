@@ -91,6 +91,10 @@ h3 {
   padding: 0 var(--edge-gap);
   z-index: 10;
 }
+/* תוספת להסרת הנקודה מה-<li> של דף הבית */
+.main-nav > li, a {
+  list-style: none;
+}
 
 /* Main menu list */
 .nav-topics {
@@ -113,6 +117,7 @@ h3 {
   padding: 12px 8px;
   transform: scaleX(0.93) scaleY(1.05);
   transform-origin: center;
+  min-width: 80px;
 }
 
 .nav-topics > li > a::after {
@@ -143,7 +148,7 @@ h3 {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 12px 8px;
+  padding: 8px 8px;
   background: none;
 }
 /* underline on hover for דף הבית */
@@ -183,9 +188,7 @@ h3 {
   position: absolute;
   top: 100%; /* מתחיל בדיוק מתחת לפריט ההורה */
   right: 0; /* צמוד לגבול הימני של העובדה־הורה */
-  transform: translateY(
-    -1px
-  ); /* מזיזים אותו 4px מעלה כדי לכסות את פס ההדגשה (4px) של הקישור */
+  transform: translateY(-1px); /* מאזז 1px לכיסוי פס ההדגשה */
   background: var(--primary-color);
   min-width: 180px;
   white-space: nowrap;
@@ -198,6 +201,7 @@ h3 {
 .has-submenu:hover .submenu {
   display: block;
 }
+
 /* Dropdown items */
 .submenu li {
   list-style: none;
@@ -218,6 +222,7 @@ h3 {
   background: var(--primary-hover-bg);
   color: var(--primary-hover-tx);
 }
+
 /* Optional separators & labels */
 .submenu li.divider {
   height: 1px;
@@ -256,7 +261,6 @@ h3 {
   position: relative;
   overflow: hidden;
   height: fit-content;
-  /* height remains implicit for responsive resizing */
 }
 .birthdays-widget h2 {
   font-size: 1.2rem;
@@ -265,7 +269,7 @@ h3 {
 .birthdays-container {
   position: relative;
   overflow: hidden;
-  height: 240px;  /* גובה נניח – תתאים לפי הצורך */
+  height: 240px; /* גובה נניח – תתאים לפי הצורך */
 }
 
 /* Birthday cards list */
@@ -282,18 +286,17 @@ h3 {
 
 .birthday-card {
   display: flex;
-  flex-direction: row;        /* שורה, לא עמודה */
+  flex-direction: row; /* שורה, לא עמודה */
   justify-content: space-between; /* שם מימין, תאריך משמאל */
-  align-items: center;        /* יישור אנכי מרכזי */
+  align-items: center; /* יישור אנכי מרכזי */
   background: #f0fafa;
   margin-bottom: 8px;
   padding: 8px 12px;
   border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 /* Main body */
 .main-body {
