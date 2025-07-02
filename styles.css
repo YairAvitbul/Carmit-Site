@@ -117,7 +117,7 @@ h3 {
   padding: 12px 8px;
   transform: scaleX(0.93) scaleY(1.05);
   transform-origin: center;
-  min-width: 80px;
+  min-width: fit-content;
 }
 
 .nav-topics > li > a::after {
@@ -129,8 +129,8 @@ h3 {
   height: 4px;
   background: #fff;
   transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  transform-origin: right;
+  transition: transform 0.258s ease;
   z-index: 1002; /* הכי גבוה כדי שפס הלבן יבלוט מעל הכול */
 }
 
@@ -162,7 +162,7 @@ h3 {
   background: #fff;
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 .nav-home:hover::after {
   transform: scaleX(1);
