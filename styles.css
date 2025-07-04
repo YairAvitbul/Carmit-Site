@@ -195,7 +195,7 @@ h3 {
   top: 100%; /* מתחיל בדיוק מתחת לפריט ההורה */
   right: 0; /* צמוד לגבול הימני של העובדה־הורה */
   transform: translateY(-1px); /* מאזז 1px לכיסוי פס ההדגשה */
-  background: var(--primary-color);
+  background: var(--header-footer-color);
   min-width: 180px;
   white-space: nowrap;
   margin: 0;
@@ -218,7 +218,7 @@ h3 {
   width: 100%;
   box-sizing: border-box;
   padding: 10px 12px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-decoration: none;
   color: #fff;
   text-align: right;
@@ -226,7 +226,7 @@ h3 {
 }
 .submenu li a:hover {
   background: var(--primary-hover-bg);
-  color: var(--primary-hover-tx);
+  color: var(--header-footer-color);
 }
 
 /* Optional separators & labels */
