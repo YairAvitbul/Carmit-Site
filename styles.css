@@ -61,14 +61,17 @@ h3 {
 .site-header {
   position: relative;
   width: 100%;
-  margin-block-start: var(--vertical-gap);
-  padding: 16px var(--edge-gap);
+  margin-block-start: 30;
+  padding: 0 var(--edge-gap);
   background: #fff;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
 .site-title {
   /* הוגדר למעלה תחת h1 */
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 1000;
   color: var(--primary-color);
 }
 .logo {
