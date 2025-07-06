@@ -84,29 +84,24 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 
-// פתיחת modal להצגת הקובץ מתוך תפריט המשנה
-document.querySelectorAll('.submenu a').forEach(link =>
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    // כאן משתמשים ב-href כפי שהוא, בתוך התיקייה docs/whatever/yourfile.pdf
-    const filePath = link.getAttribute('href');
-    const modal = document.getElementById('modal');
-    const iframe = document.getElementById('modal-iframe');
-    iframe.src = filePath;
-    modal.classList.remove('hidden');
-  })
-);
+  // פתיחת modal להצגת הקובץ מתוך תפריט המשנה
+  document.querySelectorAll('.submenu a').forEach(link =>
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('modal-iframe').src = link.href;
+      document.getElementById('modal').classList.remove('hidden');
+    })
+  );
 
-// סגירת modal
-const modal = document.getElementById('modal');
-document.querySelector('.modal-close').addEventListener('click', () => {
-  modal.classList.add('hidden');
-  document.getElementById('modal-iframe').src = '';
-});
-modal.addEventListener('click', e => {
-  if (e.target === modal) {
+  // סגירת modal
+  const modal = document.getElementById('modal');
+  document.querySelector('.modal-close').addEventListener('click', () => {
     modal.classList.add('hidden');
     document.getElementById('modal-iframe').src = '';
-  }
-});
-
+  });
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      document.getElementById('modal-iframe').src = '';
+    }
+  });
