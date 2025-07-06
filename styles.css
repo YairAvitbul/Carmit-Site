@@ -1,0 +1,380 @@
+/* styles.css */
+:root {
+  --primary-color: #39b3b3;
+  --header-footer-color: #798282;
+  --primary-hover-bg: #ffffff;
+  --primary-hover-tx: #39b3b3;
+  --text-color: #444444;
+  --edge-gap: 120px;
+  --vertical-gap: 20px;
+}
+
+/* Include padding and border in width calculations */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* RTL direction */
+html {
+  direction: rtl;
+}
+
+/* Base typography */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f9f9f9;
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  line-height: 1.7; /* מרווח שורות מוגדל לקריאות */
+}
+
+/* כותרת ראשית */
+h1,
+.site-title {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+
+/* כותרת משנית */
+h2,
+.main-title {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* תתי-כותרות */
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+/* Header */
+.site-header {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.site-title {
+  /* הוגדר למעלה תחת h1 */
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 1000;
+  color: var(--primary-color);
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  right: var(--edge-gap);
+  transform: translateY(-50%);
+  max-height: 60px;
+}
+
+/* Navbar */
+.main-nav {
+  position: relative;
+  width: 100%;
+  height: 55px;
+  background: var(--header-footer-color);
+  display: flex;
+  justify-content: center; /* center the menu items */
+  align-items: center;
+  padding: 0 var(--edge-gap);
+  z-index: 10;
+}
+/* תוספת להסרת הנקודה מה-<li> של דף הבית */
+.main-nav > li, a {
+  list-style: none;
+}
+
+/* Main menu list */
+.nav-topics {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Level-1 links with underline-on-hover above submenu */
+.nav-topics > li > a {
+  position: relative;
+  z-index: 1001; /* מעל ה-submenu (z-index של ה-submenu הוא 1000) */
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 12px 8px;
+  transform: scaleX(0.93) scaleY(1.05);
+  transform-origin: center;
+  min-width: fit-content;
+}
+
+.nav-topics > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.258s ease;
+  z-index: 1002; /* הכי גבוה כדי שפס הלבן יבלוט מעל הכול */
+}
+
+.nav-topics > li:hover > a::after {
+  transform: scaleX(1);
+}
+
+/* “דף הבית” pinned to right edge */
+.nav-home {
+  position: absolute;
+  top: 50%;
+  right: var(--edge-gap);
+  transform: translateY(-50%) scaleX(0.93) scaleY(1.05);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 8px 8px;
+  background: none;
+}
+/* underline on hover for דף הבית */
+.nav-home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+.nav-home:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Submenu arrow */
+.has-submenu {
+  position: relative;
+}
+.has-submenu > a::before {
+  content: "▾";
+  position: absolute;
+  left: -1em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Dropdown (level-2) */
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 100%; /* מתחיל בדיוק מתחת לפריט ההורה */
+  right: 0; /* צמוד לגבול הימני של העובדה־הורה */
+  transform: translateY(-1px); /* מאזז 1px לכיסוי פס ההדגשה */
+  background: var(--header-footer-color);
+  min-width: 180px;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  display: none;
+  z-index: 1000;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* Dropdown items */
+.submenu li {
+  list-style: none;
+}
+.submenu li a,
+.submenu li span {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  text-align: right;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.submenu li a:hover {
+  background: var(--primary-hover-bg);
+  color: var(--header-footer-color);
+}
+
+/* Optional separators & labels */
+.submenu li.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 4px 0;
+}
+.submenu li.disabled span {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: default;
+}
+.submenu li.view-all a {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Main layout */
+.content {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  padding: 16px var(--edge-gap);
+  padding-left: 220px;
+  padding-right: 95px;
+}
+
+/* Birthdays sidebar */
+.birthdays-widget {
+  flex: 1;
+  max-width: 280px;
+  background: #fff;
+  padding: 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-inline-end: var(--edge-gap);
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+.birthdays-widget h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.birthdays-container {
+  position: relative;
+  overflow: hidden;
+  height: 240px; /* גובה נניח – תתאים לפי הצורך */
+}
+
+/* Birthday cards list */
+.birthdays-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: fit-content;
+}
+
+.birthday-card {
+  display: flex;
+  flex-direction: row; /* שורה, לא עמודה */
+  justify-content: space-between; /* שם מימין, תאריך משמאל */
+  align-items: center; /* יישור אנכי מרכזי */
+  background: #f0fafa;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Main body */
+.main-body {
+  flex: 3;
+  background: #fff;
+  padding: 32px;
+  border-radius: 6px;
+}
+/* Main body title */
+.main-title {
+  margin: 0 0 24px;
+  /* font-size and weight already defined under h2 */
+  color: var(--primary-color);
+}
+/* Portal text paragraphs */
+.portal-text p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+/* Highlighted paragraphs */
+.portal-text p.highlight {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+/* Modal preview */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer */
+.site-footer {
+  width: 100%;
+  padding: calc(var(--vertical-gap) * 2) var(--edge-gap);
+  background: var(--header-footer-color);
+  margin-top: auto;
+  color: #fff;
+  font-size: 0.95rem;
+}
