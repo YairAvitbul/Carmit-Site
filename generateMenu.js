@@ -34,8 +34,8 @@ function buildTree(dir, baseUrl = '') {
 }
 
 // נתיב לתיקיית "מידע טכני"
-const docsDir = path.join(__dirname, 'docs', 'מידע טכני');
-const tree = buildTree(docsDir, 'docs/מידע טכני');
+const docsDir = path.join(__dirname, 'docs/navbar', 'מידע טכני');
+const tree = buildTree(docsDir, 'docs/navbar/מידע טכני');
 
 fs.writeFileSync(
   path.join(__dirname, 'docs', 'menu.json'),

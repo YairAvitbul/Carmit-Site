@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // const re = /_R01|_R02|_R03|\.pdf|CAIS130200-/g;
 
-  const toRemove = ["_R01", "_R02", "_R03", ".pdf", "CAIS130200-", "-11-", "-12-", "-13-", "-14-", "-15-", "-18"];
+  const toRemove = ["_R01", "_R02", "_R03", ".pdf", "CAIS130200-", "10-", "11-", "12-", "13-", "14-", "15-", "16-", "18-", "17-"];
 
   // 9. בונים את תפריט "מדריכי הפעלה" מתוך docs/menu.json
   async function buildDocsMenu() {

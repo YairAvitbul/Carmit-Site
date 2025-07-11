@@ -13,30 +13,20 @@
         "path": null,
         "children": [
           {
-            "name": "בדיקה",
-            "path": null,
-            "children": [
-              {
-                "name": "Safety-Overview.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/%D7%91%D7%93%D7%99%D7%A7%D7%94/Safety-Overview.pdf"
-              }
-            ]
-          },
-          {
             "name": "Drayer",
             "path": null,
             "children": [
               {
-                "name": "CAIS130200-AOG-Dryer_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Drayer/CAIS130200-AOG-Dryer_R01.pdf"
+                "name": "CAIS130200-AOG-17-Dryer_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Drayer/CAIS130200-AOG-17-Dryer_R01.pdf"
               },
               {
-                "name": "CAIS130200-OMM-Dryer Air Heater_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Drayer/CAIS130200-OMM-Dryer%20Air%20Heater_R01.pdf"
+                "name": "CAIS130200-OMM-17-Dryer Air Heater_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Drayer/CAIS130200-OMM-17-Dryer%20Air%20Heater_R01.pdf"
               },
               {
-                "name": "CAIS130200-OMM-Dryer_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Drayer/CAIS130200-OMM-Dryer_R01.pdf"
+                "name": "CAIS130200-OMM-17-Dryer_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Drayer/CAIS130200-OMM-17-Dryer_R01.pdf"
               }
             ]
           },
@@ -45,20 +35,20 @@
             "path": null,
             "children": [
               {
-                "name": "CAIS130200-AOG-Formulation_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-AOG-Formulation_R01.pdf"
+                "name": "CAIS130200-AOG-13-Formulation_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-AOG-13-Formulation_R01.pdf"
               },
               {
-                "name": "CAIS130200-OMM Ball Mill_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-OMM%20Ball%20Mill_R01.pdf"
+                "name": "CAIS130200-OMM-131024AP Stucco Aeration Disc_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-OMM-131024AP%20Stucco%20Aeration%20Disc_R01.pdf"
               },
               {
-                "name": "CAIS130200-OMM Stucco Rotary Screen_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-OMM%20Stucco%20Rotary%20Screen_R01.pdf"
+                "name": "CAIS130200-OMM-131064RS Stucco Rotary Screen_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-OMM-131064RS%20Stucco%20Rotary%20Screen_R01.pdf"
               },
               {
-                "name": "CAIS130200-OMM-Stucco Aeration Disc_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-OMM-Stucco%20Aeration%20Disc_R01.pdf"
+                "name": "CAIS130200-OMM-132045BM Ball Mill_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/formulation/CAIS130200-OMM-132045BM%20Ball%20Mill_R01.pdf"
               }
             ]
           },
@@ -68,15 +58,15 @@
             "children": [
               {
                 "name": "CAIS130200-AOG-12-Mill_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mill/CAIS130200-AOG-12-Mill_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mill/CAIS130200-AOG-12-Mill_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-12-Mill Air Heater_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mill/CAIS130200-OMM-12-Mill%20Air%20Heater_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mill/CAIS130200-OMM-12-Mill%20Air%20Heater_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-123010ER Stucco Cooler_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mill/CAIS130200-OMM-123010ER%20Stucco%20Cooler_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mill/CAIS130200-OMM-123010ER%20Stucco%20Cooler_R01.pdf"
               }
             ]
           },
@@ -86,23 +76,23 @@
             "children": [
               {
                 "name": "CAIS130200-AOG-15-Mixing Forming_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-AOG-15-Mixing%20Forming_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-AOG-15-Mixing%20Forming_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-15-Boardline_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Boardline_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Boardline_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-15-Creaser_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Creaser_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Creaser_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-15-Forming Plate_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Forming%20Plate_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Forming%20Plate_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-15-Pin Mixer_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Pin%20Mixer_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/mixing%26forming/CAIS130200-OMM-15-Pin%20Mixer_R01.pdf"
               }
             ]
           },
@@ -112,19 +102,19 @@
             "children": [
               {
                 "name": "CAIS130200-AOG-14-PaperHandling_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-AOG-14-PaperHandling_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-AOG-14-PaperHandling_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-14-Paper Heater_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-OMM-14-Paper%20Heater_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-OMM-14-Paper%20Heater_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-14-Roll Stand_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-OMM-14-Roll%20Stand_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-OMM-14-Roll%20Stand_R01.pdf"
               },
               {
                 "name": "CAIS130200-OMM-14-Splicer_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-OMM-14-Splicer_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/paper%20handling/CAIS130200-OMM-14-Splicer_R01.pdf"
               }
             ]
           },
@@ -134,7 +124,7 @@
             "children": [
               {
                 "name": "CAIS130200-AOG-11-Rock Handling Area_R03.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/rock%20handling/CAIS130200-AOG-11-Rock%20Handling%20Area_R03.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/rock%20handling/CAIS130200-AOG-11-Rock%20Handling%20Area_R03.pdf"
               }
             ]
           },
@@ -144,11 +134,11 @@
             "children": [
               {
                 "name": "CAIS130200-AOG-18-Takeoff_R02.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Takeoff/CAIS130200-AOG-18-Takeoff_R02.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Takeoff/CAIS130200-AOG-18-Takeoff_R02.pdf"
               },
               {
                 "name": "CAIS130200-OMM-18-Finishing Saw_R01.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Takeoff/CAIS130200-OMM-18-Finishing%20Saw_R01.pdf"
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Takeoff/CAIS130200-OMM-18-Finishing%20Saw_R01.pdf"
               }
             ]
           },
@@ -157,18 +147,22 @@
             "path": null,
             "children": [
               {
-                "name": "Knife.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/wet%20board%20handling/Knife.pdf"
+                "name": "CAIS130200-AOG-16-Wet Transfer_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/wet%20board%20handling/CAIS130200-AOG-16-Wet%20Transfer_R01.pdf"
               },
               {
-                "name": "Wet Transfer.pdf",
-                "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/wet%20board%20handling/Wet%20Transfer.pdf"
+                "name": "CAIS130200-OMM-16-Knife_R01.pdf",
+                "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/wet%20board%20handling/CAIS130200-OMM-16-Knife_R01.pdf"
               }
             ]
           },
           {
-            "name": "Maintenance-Manual.pdf",
-            "path": "docs/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/Maintenance-Manual.pdf"
+            "name": "CAIS130200-AOG-10-SafetyOverview_R01.pdf",
+            "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/CAIS130200-AOG-10-SafetyOverview_R01.pdf"
+          },
+          {
+            "name": "CAIS130200-GMM-10-Boardplant_R01.pdf",
+            "path": "docs/navbar/מידע טכני/%D7%9E%D7%93%D7%A8%D7%99%D7%9B%D7%99%20%D7%94%D7%A4%D7%A2%D7%9C%D7%94/GypTech/CAIS130200-GMM-10-Boardplant_R01.pdf"
           }
         ]
       },
