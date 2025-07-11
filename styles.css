@@ -32,7 +32,8 @@ body {
   color: var(--text-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
     sans-serif;
-  line-height: 1.7; /* מרווח שורות מוגדל לקריאות */
+  line-height: 1.7;
+  /* מרווח שורות מוגדל לקריאות */
 }
 
 /* כותרת ראשית */
@@ -69,6 +70,7 @@ h3 {
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
+
 .site-title {
   /* הוגדר למעלה תחת h1 */
   font-size: 3rem;
@@ -76,6 +78,7 @@ h3 {
   font-weight: 1000;
   color: var(--primary-color);
 }
+
 .logo {
   position: absolute;
   top: 50%;
@@ -91,13 +94,16 @@ h3 {
   height: 55px;
   background: var(--header-footer-color);
   display: flex;
-  justify-content: center; /* center the menu items */
+  justify-content: center;
+  /* center the menu items */
   align-items: center;
   padding: 0 var(--edge-gap);
   z-index: 10;
 }
+
 /* תוספת להסרת הנקודה מה-<li> של דף הבית */
-.main-nav > li, a {
+.main-nav>li,
+a {
   list-style: none;
 }
 
@@ -111,9 +117,10 @@ h3 {
 }
 
 /* Level-1 links with underline-on-hover above submenu */
-.nav-topics > li > a {
+.nav-topics>li>a {
   position: relative;
-  z-index: 1001; /* מעל ה-submenu (z-index של ה-submenu הוא 1000) */
+  z-index: 1001;
+  /* מעל ה-submenu (z-index של ה-submenu הוא 1000) */
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -125,7 +132,7 @@ h3 {
   min-width: fit-content;
 }
 
-.nav-topics > li > a::after {
+.nav-topics>li>a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -136,10 +143,11 @@ h3 {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.258s ease;
-  z-index: 1002; /* הכי גבוה כדי שפס הלבן יבלוט מעל הכול */
+  z-index: 1002;
+  /* הכי גבוה כדי שפס הלבן יבלוט מעל הכול */
 }
 
-.nav-topics > li:hover > a::after {
+.nav-topics>li:hover>a::after {
   transform: scaleX(1);
 }
 
@@ -156,6 +164,7 @@ h3 {
   padding: 8px 8px;
   background: none;
 }
+
 /* underline on hover for דף הבית */
 .nav-home::after {
   content: "";
@@ -169,6 +178,7 @@ h3 {
   transform-origin: center;
   transition: transform 0.25s ease;
 }
+
 .nav-home:hover::after {
   transform: scaleX(1);
 }
@@ -178,13 +188,14 @@ h3 {
 .has-submenu {
   position: relative;
 }
-.has-submenu > a::before {
-  content: "▾";
+
+.has-submenu>a::before {
+  content: "▽";
   position: absolute;
   left: -1em;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
-  font-size: 1.1em;
+  font-size: 70%;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -192,17 +203,67 @@ h3 {
 .submenu {
   list-style: none;
   position: absolute;
-  top: 100%; /* מתחיל בדיוק מתחת לפריט ההורה */
-  right: 0; /* צמוד לגבול הימני של העובדה־הורה */
-  transform: translateY(-1px); /* מאזז 1px לכיסוי פס ההדגשה */
+  top: 100%;
+  /* מתחיל בדיוק מתחת לפריט ההורה */
+  right: 0;
+  /* צמוד לגבול הימני של העובדה־הורה */
+  transform: translateY(-1px);
+  /* מאזז 1px לכיסוי פס ההדגשה */
   background: var(--header-footer-color);
-  min-width: 180px;
+  min-width: 100px;
   white-space: nowrap;
   margin: 0;
   padding: 0;
   display: none;
   z-index: 1000;
 }
+
+
+/* ———————————————————————————————— */
+/* הורדה של display:none והצגת תתי־תפריטים על hover */
+/* ודא שכל <li> עם submenu הוא relative */
+.nav-topics li,
+.main-nav li.has-submenu {
+  position: relative;
+}
+
+/* הצגה של submenu מיידית (Level 1) מתחת לפריט */
+.main-nav li.has-submenu:hover>.submenu {
+  display: block;
+}
+
+/* מיקום של ניובה ראשון: מתחת לפריט ההורה */
+.main-nav .submenu {
+  top: 100%;
+  /* ישר אחרי ההורה */
+  right: 0;
+  /* צמוד לגב הימני של ההורה */
+}
+
+/* תתי־תפריטים עמוקים יותר (Level 2+) ייפתחו לצד שמאל של הרמה העליונה */
+.main-nav .submenu li.has-submenu>.submenu {
+  top: 0;
+  /* מתחיל בגובה של ההורה הישיר */
+  right: 100%;
+  /* מתיישר לצד השמאלי (ב-RTL זה הכיוון ההגיוני) */
+  display: none;
+  /* מוסתרים כברירת מחדל */
+}
+
+/* הצגה על hover (Level 2+) */
+.main-nav .submenu li.has-submenu:hover>.submenu {
+  display: block;
+}
+
+/* אפשר אותו חוק לכל העומק (אין צורך לחזור על כך שוב ושוב) */
+/* אפשר גם להוסיף אנימציה קלה אם רוצים */
+
+
+
+.pdf-option {
+  background-color: #39b3b3;
+}
+
 
 .has-submenu:hover .submenu {
   display: block;
@@ -212,18 +273,20 @@ h3 {
 .submenu li {
   list-style: none;
 }
+
 .submenu li a,
 .submenu li span {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 12px;
+  padding: 5px 10px;
   font-size: 1rem;
   text-decoration: none;
   color: #fff;
   text-align: right;
   transition: background 0.2s ease, color 0.2s ease;
 }
+
 .submenu li a:hover {
   background: var(--primary-hover-bg);
   color: var(--header-footer-color);
@@ -235,13 +298,44 @@ h3 {
   background: rgba(255, 255, 255, 0.4);
   margin: 4px 0;
 }
+
 .submenu li.disabled span {
   color: rgba(255, 255, 255, 0.6);
   cursor: default;
 }
+
 .submenu li.view-all a {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+/* ---------------------------------
+   ▷ חץ שמאלה לכל פריט עם תת-תפריט
+------------------------------------*/
+/* מוודא שלקישורים יש מקום לחץ */
+.submenu .has-submenu>a {
+  position: relative;
+  padding-left: 24px;
+  /* מרווח לכיוון שמאל שיכלול את החץ */
+}
+
+/* מוסיף חץ שמאלה בתחילת הקישור */
+.submenu .has-submenu>a::before {
+  content: "◁";
+  /* חץ שמאלה */
+  position: absolute;
+  left: 8px;
+  /* המרחק משמאל */
+  top: 50%;
+  /* יישור אנכי */
+  transform: translateY(-50%);
+  font-size: 65%;
+  /* גודל התו */
+  color: rgba(255, 255, 255, 0.9);
+  /* צבע */
+  pointer-events: none;
+  /* החץ לא יקבל קליקים */
+}
+
 
 /* Main layout */
 .content {
@@ -268,14 +362,17 @@ h3 {
   overflow: hidden;
   height: fit-content;
 }
+
 .birthdays-widget h2 {
   font-size: 1.2rem;
   margin-bottom: 8px;
 }
+
 .birthdays-container {
   position: relative;
   overflow: hidden;
-  height: 240px; /* גובה נניח – תתאים לפי הצורך */
+  height: 240px;
+  /* גובה נניח – תתאים לפי הצורך */
 }
 
 /* Birthday cards list */
@@ -292,12 +389,15 @@ h3 {
 
 .birthday-card {
   display: flex;
-  flex-direction: row; /* שורה, לא עמודה */
-  justify-content: space-between; /* שם מימין, תאריך משמאל */
-  align-items: center; /* יישור אנכי מרכזי */
+  flex-direction: row;
+  /* שורה, לא עמודה */
+  justify-content: space-between;
+  /* שם מימין, תאריך משמאל */
+  align-items: center;
+  /* יישור אנכי מרכזי */
   background: #f0fafa;
   margin-bottom: 8px;
-  padding: 8px 12px;
+  padding: 8px;
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
@@ -311,18 +411,21 @@ h3 {
   padding: 32px;
   border-radius: 6px;
 }
+
 /* Main body title */
 .main-title {
   margin: 0 0 24px;
   /* font-size and weight already defined under h2 */
   color: var(--primary-color);
 }
+
 /* Portal text paragraphs */
 .portal-text p {
   font-size: 1.15rem;
   line-height: 1.7;
   margin-bottom: 1em;
 }
+
 /* Highlighted paragraphs */
 .portal-text p.highlight {
   color: var(--primary-color);
@@ -345,9 +448,11 @@ h3 {
   justify-content: center;
   z-index: 2000;
 }
+
 .modal.hidden {
   display: none;
 }
+
 .modal-content {
   position: relative;
   width: 80%;
@@ -356,6 +461,7 @@ h3 {
   border-radius: 4px;
   overflow: hidden;
 }
+
 .modal-close {
   position: absolute;
   top: 10px;
@@ -363,6 +469,7 @@ h3 {
   font-size: 24px;
   cursor: pointer;
 }
+
 .modal-content iframe {
   width: 100%;
   height: 100%;

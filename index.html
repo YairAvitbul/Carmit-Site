@@ -20,17 +20,34 @@
   <!-- Navbar -->
   <nav class="main-nav">
     <li><a href="#home" class="nav-home">דף הבית</a></li>
+
     <ul class="nav-topics">
+
+
+
       <li class="has-submenu">
         <a href="#safety">בטיחות</a>
         <ul class="submenu">
-          <li><a href="/docs/GypTech/Maintenance-Manual.pdf">טבלת חומרי גלם</a></li>
+          <li><a href="/docs/מידע טכני/מדריכי הפעלה/GypTech/Maintenance-Manual.pdf">טבלת חומרי גלם</a></li>
           <li><a href="docs/safety-procedure.pdf">Msds & TDS</a></li>
           <li><a href="docs/safety-procedure.pdf">קישור לJSA</a></li>
           <li><a href="docs/safety-procedure.pdf">סיכום ועדה אחרונה</a></li>
           <li><a href="docs/safety-procedure.pdf">טבלת צוות חירום</a></li>
         </ul>
       </li>
+
+
+
+      <li class="has-submenu">
+        <a href="#hr">מידע טכני</a>
+        <ul class="submenu">
+          <!-- ממלאים כאן אוטומטית -->
+          <ul id="dynamic-docs-menu" class="submenu"></ul>
+        </ul>
+      </li>
+
+
+
       <li class="has-submenu">
         <a href="#quality">נהלי החברה</a>
         <ul class="submenu">
@@ -39,6 +56,9 @@
           <li><a href="docs/quality-guidelines.pdf">נוהל קבלת סחורה</a></li>
         </ul>
       </li>
+
+
+
       <li class="has-submenu">
         <a href="#hr">משאבי אנוש</a>
         <ul class="submenu">
@@ -48,20 +68,30 @@
           <li><a href="docs/hr-policy.pdf">ביגוד לעובד</a></li>
         </ul>
       </li>
+
+
       <li class="has-submenu">
         <a href="#maintenance">תהליכים</a>
         <ul class="submenu">
-          <li><a href="docs/mechanical-maintenance.pdf">תהליך 1</a></li>
+          <li class="has-submenu">
+            <a href="docs/mechanical-maintenance.pdf">תהליך 1</a>
+            <ul class="submenu">
+              <li><a href="docs/step1.pdf">שלב 1.1</a></li>
+              <li><a href="docs/step2.pdf">שלב 1.2</a></li>
+              <!-- אם צריך עוד רמה נוספת -->
+              <li class="has-submenu">
+                <a href="#">עוד אפשרויות</a>
+                <ul class="submenu">
+                  <li><a href="docs/detailA.pdf">פרט A</a></li>
+                  <li><a href="docs/detailB.pdf">פרט B</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
           <li><a href="docs/electrical-maintenance.pdf">תהליך 2</a></li>
         </ul>
       </li>
 
-      <li class="has-submenu">
-        <a href="#hr">מידע טכני</a>
-        <ul class="submenu">
-          <li><a href="docs/hr-policy.pdf">מדריכי הפעלה</a></li>
-        </ul>
-      </li>
 
       <li class="has-submenu">
         <a href="#hr">כללי</a>

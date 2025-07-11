@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }))
     .filter(e => e.name && e.birth instanceof Date);
 
-    // 5. פונקציה שבודקת אם יום־הולדת נמצא בחודש הקרוב
+  // 5. פונקציה שבודקת אם יום־הולדת נמצא בחודש הקרוב
   function isBirthdayWithinNextMonth(birthDate) {
     const currentMonth = new Date().getMonth();
     const bd = new Date(birthDate);
@@ -81,27 +81,85 @@ document.addEventListener('DOMContentLoaded', async () => {
     container.style.transform = `translateY(-${scrollPos}px)`;
     if (scrollPos >= container.scrollHeight / 2) scrollPos = 0;
   }, speed);
+
+
+
+
+
+
+
+  // const re = /_R01|_R02|_R03|\.pdf|CAIS130200-/g;
+
+  const toRemove = ["_R01", "_R02", "_R03", ".pdf", "CAIS130200-", "-11-", "-12-", "-13-", "-14-", "-15-", "-18"];
+
+  // 9. בונים את תפריט "מדריכי הפעלה" מתוך docs/menu.json
+  async function buildDocsMenu() {
+    const resp = await fetch('docs/menu.json');
+    const tree = await resp.json();
+    const container = document.getElementById('dynamic-docs-menu');
+
+    function createList(items) {
+      const ul = document.createElement('ul');
+      items.forEach(item => {
+        const li = document.createElement('li');
+        if (item.children) {
+          li.classList.add('has-submenu');
+          const a = document.createElement('a');
+          a.href = '#';
+          a.textContent = item.name;
+          li.appendChild(a);
+          const sub = createList(item.children);
+          sub.classList.add('submenu');
+          li.appendChild(sub);
+        } else {
+          const a = document.createElement('a');
+          a.href = item.path;
+          a.textContent = toRemove.reduce(
+            (str, sub) => str.replaceAll(sub, ""),
+            item.name
+          ).replace("-", " ");
+
+          // a.textContent = a.textContent;
+          // a.textContent = a.textContent.replace("_R01", "");
+          // a.textContent = a.textContent.replace("_R02", "");
+          // a.textContent = a.textContent.replace("_R03", "");
+          // a.textContent = a.textContent.replace(".pdf", "");
+          // a.textContent = a.textContent.replace("CAIS130200-", "");
+
+          // a.textContent = a.textContent.replace(["-11-", "-12-", "-13-", "-14-",], "");
+          a.classList.add('pdf-option');
+          li.appendChild(a);
+        }
+        ul.appendChild(li);
+      });
+      return ul;
+    }
+
+    // מנקים ושובצים
+    container.innerHTML = '';
+    container.appendChild(createList(tree));
+
+    // מוסיפים האזנה ללינקים (אחרי שהתווספו ל־DOM!)
+    container.querySelectorAll('.pdf-option').forEach(link =>
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('modal-iframe').src = link.href;
+        document.getElementById('modal').classList.remove('hidden');
+      }));
+  }
+  // בסוף ה־DOMContentLoaded שלך:
+  await buildDocsMenu();
 });
 
-
-  // פתיחת modal להצגת הקובץ מתוך תפריט המשנה
-  document.querySelectorAll('.submenu a').forEach(link =>
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      document.getElementById('modal-iframe').src = link.href;
-      document.getElementById('modal').classList.remove('hidden');
-    })
-  );
-
-  // סגירת modal
-  const modal = document.getElementById('modal');
-  document.querySelector('.modal-close').addEventListener('click', () => {
+// סגירת modal
+const modal = document.getElementById('modal');
+document.querySelector('.modal-close').addEventListener('click', () => {
+  modal.classList.add('hidden');
+  document.getElementById('modal-iframe').src = '';
+});
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
     modal.classList.add('hidden');
     document.getElementById('modal-iframe').src = '';
-  });
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.classList.add('hidden');
-      document.getElementById('modal-iframe').src = '';
-    }
-  });
+  }
+});
